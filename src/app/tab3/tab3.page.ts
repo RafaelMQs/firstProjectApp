@@ -1,3 +1,4 @@
+import { IFilme } from '../models/iFilme.model';
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
@@ -8,6 +9,35 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
+
+  titulo = 'Top Filmes';
+
+  listaFilmes: IFilme[] = [
+    {
+      nome: 'Homem-Aranha: Sem Volta Para Casa (2021)',
+      lancamento: '16/12/2021 (BR)',
+      duracao: '2h 28m',
+      avaliacao: 84,
+      cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fVzXp3NwovUlLe7fvoRynCmBPNc.jpg',
+      generos: ['Ação', 'Aventura', 'Ficção científica']
+    },
+    {
+      nome: 'Resident Evil: Bem-Vindo a Raccoon City (2021)',
+      lancamento: '02/12/2021 (BR)',
+      duracao: '1h 47m',
+      avaliacao: 61,
+      cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/eStYYbyaxyDMzHVkGrmkiSrMi0h.jpg',
+      generos: ['Terror', 'Ação', 'Ficção científica']
+    },
+    {
+      nome: 'Matrix Resurrections (2021)',
+      lancamento: '22/12/2021 (BR)',
+      duracao: '2h 28m',
+      avaliacao: 71,
+      cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8c4a8kE7PizaGQQnditMmI1xbRp.jpg',
+      generos: ['Ação', 'Ficção científica']
+    }
+  ];
 
   constructor(public alertController: AlertController, public toastController: ToastController) {}
 
