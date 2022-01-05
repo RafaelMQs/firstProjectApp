@@ -1,0 +1,24 @@
+h1{
+  font-weight: bold;
+  font-size: 1rem;
+  color: black;
+}
+
+ion-chip{
+  padding-inline: 3px;
+}
+
+p{
+  font-size: 0.7rem;
+}
+p+p{
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+ion-badge{
+  font-weight: 300;
+  font-size: 0.8rem;
+  margin-right: 3px;
+}

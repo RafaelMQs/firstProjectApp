@@ -5,6 +5,7 @@ export interface IFilme {
   avaliacao: number;
   cartaz: string;
   generos: string[];
+  sinopse?: string;
   pagina?: string;
 }
 

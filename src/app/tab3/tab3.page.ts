@@ -22,6 +22,9 @@ export class Tab3Page {
       avaliacao: 84,
       cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fVzXp3NwovUlLe7fvoRynCmBPNc.jpg',
       generos: ['Ação', 'Aventura', 'Ficção científica'],
+      sinopse: `Peter Parker é desmascarado e não consegue mais separar sua vida normal dos grandes riscos de ser um super-herói.
+      Quando ele pede ajuda ao Doutor Estranho, os riscos se tornam ainda mais perigosos,
+      e o forçam a descobrir o que realmente significa ser o Homem-Aranha.`,
       pagina: '/spiderman-no-way-home'
     },
     {
@@ -31,6 +34,11 @@ export class Tab3Page {
       avaliacao: 61,
       cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/eStYYbyaxyDMzHVkGrmkiSrMi0h.jpg',
       generos: ['Terror', 'Ação', 'Ficção científica'],
+      sinopse: `O que já foi um dia a casa da gigante farmacêutica em expansão Umbrella Corporation,
+      Raccoon City, é agora uma cidade agonizante do meio-oeste.
+      O êxodo da empresa transformou a cidade em um deserto, com um grande mal fermentando escondido abaixo da superfície.
+      Quando esse mal é libertado, um grupo de sobreviventes deve trabalhar juntos para descobrir a
+      verdade por trás da Umbrella enquanto buscam viver por mais uma noite.`,
       pagina: '/resident-evil-raccoon-city'
     },
     {
@@ -40,6 +48,10 @@ export class Tab3Page {
       avaliacao: 71,
       cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8c4a8kE7PizaGQQnditMmI1xbRp.jpg',
       generos: ['Ação', 'Ficção científica'],
+      sinopse: `Em um mundo de duas realidades — a vida cotidiana e o que está por trás dela —,
+      Thomas Anderson terá que escolher seguir o coelho branco mais uma vez.
+      A escolha, embora seja uma ilusão, ainda é a única maneira de entrar ou sair da Matrix,
+      que é mais forte, mais segura e mais perigosa do que nunca.`,
       pagina: '/matrix-resurrections'
     }
   ];
