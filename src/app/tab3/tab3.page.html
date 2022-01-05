@@ -10,7 +10,7 @@
   <ion-searchbar placeholder="Buscar"></ion-searchbar>
   <ion-list>
     <ion-item-sliding *ngFor="let filme of listaFilmes">
-      <ion-item lines="full" [routerLink]="filme.pagina">
+      <ion-item lines="full" (click)="exibirFilme(filme)">
         <ion-thumbnail slot="start">
           <img [src]="filme.cartaz">
         </ion-thumbnail>

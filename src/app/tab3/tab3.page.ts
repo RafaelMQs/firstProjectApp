@@ -1,7 +1,9 @@
+import { DadosService } from './../services/dados.service';
 import { IFilme } from '../models/iFilme.model';
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab3',
@@ -42,9 +44,19 @@ export class Tab3Page {
     }
   ];
 
-  constructor(public alertController: AlertController, public toastController: ToastController) {}
+  constructor(
+    public alertController: AlertController,
+    public toastController: ToastController,
+    public dadosService: DadosService,
+    public route: Router) { }
 
-   async exibirAlertaFavorito() {
+  exibirFilme(filme: IFilme) {
+    this.dadosService.guardarDados('filme', filme);
+    this.route.navigateByUrl('/dados-filme');
+  }
+
+
+  async exibirAlertaFavorito() {
     const alert = await this.alertController.create({
       header: 'Alerta!',
       message: 'Deseja favoritar este filme?',

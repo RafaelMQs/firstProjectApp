@@ -18,7 +18,11 @@ const routes: Routes = [
   {
     path: 'matrix-resurrections',
     loadChildren: () => import('./filmes/matrix-resurrections/matrix-resurrections.module').then( m => m.MatrixResurrectionsPageModule)
+  },  {
+    path: 'dados-filme',
+    loadChildren: () => import('./dados-filme/dados-filme.module').then( m => m.DadosFilmePageModule)
   }
+
 
 ];
 @NgModule({
