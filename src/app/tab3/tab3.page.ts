@@ -19,7 +19,8 @@ export class Tab3Page {
       duracao: '2h 28m',
       avaliacao: 84,
       cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fVzXp3NwovUlLe7fvoRynCmBPNc.jpg',
-      generos: ['Ação', 'Aventura', 'Ficção científica']
+      generos: ['Ação', 'Aventura', 'Ficção científica'],
+      pagina: '/spiderman-no-way-home'
     },
     {
       nome: 'Resident Evil: Bem-Vindo a Raccoon City (2021)',
@@ -27,7 +28,8 @@ export class Tab3Page {
       duracao: '1h 47m',
       avaliacao: 61,
       cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/eStYYbyaxyDMzHVkGrmkiSrMi0h.jpg',
-      generos: ['Terror', 'Ação', 'Ficção científica']
+      generos: ['Terror', 'Ação', 'Ficção científica'],
+      pagina: '/resident-evil-raccoon-city'
     },
     {
       nome: 'Matrix Resurrections (2021)',
@@ -35,7 +37,8 @@ export class Tab3Page {
       duracao: '2h 28m',
       avaliacao: 71,
       cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8c4a8kE7PizaGQQnditMmI1xbRp.jpg',
-      generos: ['Ação', 'Ficção científica']
+      generos: ['Ação', 'Ficção científica'],
+      pagina: '/matrix-resurrections'
     }
   ];
 
