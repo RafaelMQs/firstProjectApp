@@ -14,7 +14,7 @@ export interface IFilmesAPI{
   popularity?: number;
   vote_count?: number;
   video?: boolean;
-  vote_avarege?: number;
+  vote_average?: number;
 }
 
 

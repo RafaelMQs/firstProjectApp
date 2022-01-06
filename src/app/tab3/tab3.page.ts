@@ -1,3 +1,5 @@
+import { IListaFilmes, IFilmesAPI } from './../models/iFilmeAPI.model';
+import { FilmeService } from './../services/filme.service';
 import { DadosService } from './../services/dados.service';
 import { IFilme } from '../models/iFilme.model';
 import { Component } from '@angular/core';
@@ -56,17 +58,31 @@ export class Tab3Page {
     }
   ];
 
+  listaFilmesCompletos: IListaFilmes;
+
   constructor(
     public alertController: AlertController,
     public toastController: ToastController,
     public dadosService: DadosService,
+    public filmeService: FilmeService,
     public route: Router) { }
 
-  exibirFilme(filme: IFilme) {
+  buscarFilmes(evento: any) {
+    console.log(evento.target.value);
+
+    const busca = evento.target.value;
+    if (busca && busca.trim() !== '') {
+      this.filmeService.buscarFilmes(busca).subscribe(dados => {
+        console.log(dados);
+        this.listaFilmesCompletos = dados;
+      });
+    }
+  }
+
+  exibirFilme(filme: IFilmesAPI) {
     this.dadosService.guardarDados('filme', filme);
     this.route.navigateByUrl('/dados-filme');
   }
-
 
   async exibirAlertaFavorito() {
     const alert = await this.alertController.create({
