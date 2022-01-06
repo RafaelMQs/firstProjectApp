@@ -1,18 +1,20 @@
+import { GeneroService } from './../services/genero.service';
 import { IListaFilmes, IFilmesAPI } from './../models/iFilmeAPI.model';
 import { FilmeService } from './../services/filme.service';
 import { DadosService } from './../services/dados.service';
 import { IFilme } from '../models/iFilme.model';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { IGenero } from '../models/IGenero.model';
 
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
   styleUrls: ['tab3.page.scss']
 })
-export class Tab3Page {
+export class Tab3Page implements OnInit {
 
   titulo = 'Top Filmes';
 
@@ -59,12 +61,14 @@ export class Tab3Page {
   ];
 
   listaFilmesCompletos: IListaFilmes;
+  generos: string[] = [];
 
   constructor(
     public alertController: AlertController,
     public toastController: ToastController,
     public dadosService: DadosService,
     public filmeService: FilmeService,
+    public generoService: GeneroService,
     public route: Router) { }
 
   buscarFilmes(evento: any) {
@@ -117,6 +121,17 @@ export class Tab3Page {
       animated: true
     });
     toast.present();
+  }
+
+  ngOnInit(){
+    this.generoService.buscaGeneros().subscribe(dados =>{
+      console.log('Generos: ', dados.genres);
+      dados.genres.forEach(genero =>{
+        this.generos[genero.id] = genero.name;
+      });
+
+      this.dadosService.guardarDados('generos', this.generos);
+    });
   }
 
 }
